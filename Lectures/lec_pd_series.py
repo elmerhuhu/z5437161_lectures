@@ -1,7 +1,5 @@
-'''
-pandas是python处理库，需要import，会比list set dict可处理更加复杂的数据结构
-重要：可处理一维的series和二维的dataframe（表格）
-'''
+
+
 
 """ lec_pd_series.py
 
@@ -39,34 +37,32 @@ prices = [
   ]
 
 
-# 1.创建series
+#
 # ---------------------------------------------------------------------------- 
 #   Create a Series instance
 # ---------------------------------------------------------------------------- 
 # Create a series object
-# 创建series的方法，可想象为一个dict，index是key(在series中叫索引)，data是value
+
 ser = pd.Series(data=prices, index=dates)
 # print(ser)
 # print(ser.index)
-# print(type(ser.index))#了解即可
+# print(type(ser.index))
 
-# 2.用index检索的方式
 # Select Qantas price on '2020-01-02' ($7.16) using ...
 
 # ... the `prices` list
-# 用list完成，首先需要找出index的位置，然后提取price对应位置上的数值就是这个index对应的value
-# 较为繁琐
+
 # print(dates.index('2020-01-02'))
 # prc0 = prices[dates.index('2020-01-02')]
 # print(prc0)
 
 # ... the `ser` series
-# 用series来提取value，可直接用【index】的方式
+
 # prc1  = ser['2020-01-02']
 # print(prc1)
 
 
-# 3. series的切片
+
 # ---------------------------------------------------------------------------- 
 #   Slicing series
 # ---------------------------------------------------------------------------- 
@@ -76,14 +72,14 @@ ser = pd.Series(data=prices, index=dates)
 # print(prcs)
 
 
-# 4.array和index
+
 # ---------------------------------------------------------------------------- 
 #   Accessing the underlying array
 # ---------------------------------------------------------------------------- 
 
 # Use `.array` to get the underlying data array
 
-# 可单独获得数据，array形式，这个array是组成我们series的一个部分
+
 # ary  = ser.array
 # print(ary)
 

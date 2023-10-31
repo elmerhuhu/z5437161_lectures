@@ -72,12 +72,12 @@ df = pd.DataFrame({'Close': prc_ser, 'Bday': bday_ser})
 
 
 # Get the series containing "Close" prices
-# 只查看一列
+
 ser = df['Close']
 # print(ser)
 
 # Get the underlying data array
-# 只查看数据
+
 # print(ser.array)
 
 # and the type
@@ -92,10 +92,7 @@ ser = df['Close']
 # The type is <class 'numpy.ndarray'>
 # print(type(ser.values))
 
-#以上只需知道numpy.array是服务于pandas的即可，深入的cs知识可不掌握
 
-
-# 重要：处理空值
 # ----------------------------------------------------------------------------
 #   Working with missing data 
 # ----------------------------------------------------------------------------
@@ -105,7 +102,7 @@ ser = df['Close']
 df_nan = df.copy()
 
 # Add an emtpy row to the `df_nan` dataframe
-# np.nan本身是一个浮点数保存，加入np.nan之后会把这一列变成float
+
 df_nan.loc['3000-01-01'] = [np.nan, np.nan]
 # print(df_nan)
 # print(df)

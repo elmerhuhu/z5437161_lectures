@@ -1,6 +1,4 @@
-'''
-dataframe处理表格型数据
-'''
+
 
 """ lec_pd_dataframes.py
 
@@ -65,16 +63,15 @@ bday_ser = pd.Series(data=bday, index=dates)
 # print(bday_ser)
 
 
-# 1. 创建dataframe
+
 # ---------------------------------------------------------------------------- 
 #   Create a dataframe
 # ---------------------------------------------------------------------------- 
 # Data Frame with close and Bday columns
-# 会以两个series的index为key合并两个series，共享index
 df = pd.DataFrame({'Close': prc_ser, 'bday': bday_ser})# {'列的名称':series}
 # print(df)
 
-# 2. df的检索
+
 # ---------------------------------------------------------------------------- 
 #   Accessing the indexes in a dataframe
 # ---------------------------------------------------------------------------- 
@@ -100,7 +97,7 @@ df = pd.DataFrame({'Close': prc_ser, 'bday': bday_ser})# {'列的名称':series}
 # print(type(df.index))
 
 
-# 2，修改
+
 # ----------------------------------------------------------------------------
 #   Modifying columns and indexes
 # ----------------------------------------------------------------------------
@@ -126,7 +123,7 @@ df = pd.DataFrame({'Close': prc_ser, 'bday': bday_ser})# {'列的名称':series}
 # print(df)
 
 
-# 3. df排序
+
 # ----------------------------------------------------------------------------
 #   Sorting 
 # ----------------------------------------------------------------------------
@@ -139,7 +136,6 @@ new_ser = pd.Series(data=[1, 3, 2], index=['a', 'c', 'b'])
 #print(new_ser.is_monotonic_increasing) 
 
 # Sort the series based on the index
-# 不会改变原有的index，但会产出一个新的index序列
 # sorted_ser = new_ser.sort_index()
 # print(sorted_ser)
 # print(new_ser)
@@ -161,7 +157,6 @@ new_ser = pd.Series(data=[1, 3, 2], index=['a', 'c', 'b'])
 # c    3
 # dtype: int64
 
-# 无需产出新的index，在原有数据上修改：inplace=True
 # Create a series with an unsorted index 
 ser_sort_inplace = pd.Series(data=[1,3,2], index=['a', 'c', 'b'])
 

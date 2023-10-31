@@ -19,17 +19,17 @@ DSTFILE = os.path.join(cfg.DATADIR, 'new_file.txt')
 # object):
 fobj  = open(SRCFILE, mode= 'r')
 # print(type(fobj))
-# print(fobj)# 无法被打印
+# print(fobj)
 
 # We can get the entire content of the file by calling the method `.read()`,
 # without parameters:
 cnts  = fobj.read()
 # print(type(cnts))
-# print(cnts)# 打印所有内容
+# print(cnts)
 
 # The variable `cnts` will be a string containing the full contents of the
 # file. This will print the first 20 characters:
-# print(cnts[:20])# 相当于这个文件第一行
+# print(cnts[:20])
 
 # Check if the file is closed
 # print(fobj.closed)
@@ -37,7 +37,7 @@ cnts  = fobj.read()
 # Close the file
 # fobj.close()
 # print(fobj.closed)
-# 以上是传统的读取文件的方式，但注意我们写代码过程中不会这样用
+
 
 
 # ---------------------------------------------------------------------------- 
@@ -143,7 +143,7 @@ def print_lines(pth):
 # If you open the same file again in writing mode, the line we wrote above
 # will be erased:
 
-# 之前的文件被覆盖
+
 # with open(DSTFILE, mode='w') as fobj:
 #    fobj.write('This is another line')
 #
@@ -155,7 +155,7 @@ def print_lines(pth):
 #   The write method does not add terminate the line.
 # ---------------------------------------------------------------------------- 
 
-# 同时写入多句
+
 # with open(DSTFILE, mode='w') as fobj:
 #    fobj.write('This is a line')
 #    fobj.write('This is a another line')
@@ -167,14 +167,12 @@ def print_lines(pth):
 #   must add it yourself:
 # ---------------------------------------------------------------------------- 
 
-# 加入换行符号：
+
 # with open(DSTFILE, mode='w') as fobj:
 #    fobj.write('This is a line\n')
 #    fobj.write('This is a another line')
 # print_lines(DSTFILE)
-#可检查newfile
-#但打印print的时候line0和line1之间存在空行，是python的特点
-#可用rstrip()去除，下例
+
 
 # ---------------------------------------------------------------------------- 
 # Auxiliary function to print the lines of a file
